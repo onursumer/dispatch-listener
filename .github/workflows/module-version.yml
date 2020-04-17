@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-          token: ${{ secrets.LERNA_SANDBOX_OWNER }}
+          token: ${{ secrets.LERNA_BOT_TOKEN }}
           repository: onursumer/lerna-sandbox
       - run: git fetch origin +refs/tags/*:refs/tags/*
       - uses: actions/setup-node@v1
@@ -20,4 +20,4 @@ jobs:
       - run: yarn
       - run: yarn updateVersion
         env:
-          GITHUB_TOKEN: ${{ secrets.LERNA_SANDBOX_OWNER }}
+          GITHUB_TOKEN: ${{ secrets.LERNA_BOT_TOKEN }}
