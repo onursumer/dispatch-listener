@@ -20,5 +20,3 @@ jobs:
       - run: yarn
       - run: yarn updateVersion
       - run: yarn publishModules
-        env:
-          GITHUB_TOKEN: ${{ secrets.LERNA_SANDBOX_OWNER }}
