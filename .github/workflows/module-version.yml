@@ -17,6 +17,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '10.20.0'
+      - run: yarn
       - run: yarn updateVersion
         env:
           GITHUB_TOKEN: ${{ secrets.LERNA_SANDBOX_OWNER }}
