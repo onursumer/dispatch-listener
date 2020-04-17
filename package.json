@@ -1,0 +1,10 @@
+{
+  "name": "dispatch-listener",
+  "version": "0.0.0",
+  "description": "Event listener for Github Dispatch actions",
+  "main": "index.js",
+  "repository": "https://github.com/onursumer/dispatch-listener.git",
+  "author": "Onur Sumer <s.onur.sumer@gmail.com>",
+  "license": "MIT",
+  "private": true
+}

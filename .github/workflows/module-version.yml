@@ -1,0 +1,22 @@
+# Update package versions
+name: Update Package Version
+
+on:
+  repository_dispatch:
+    types: [lerna-sandbox-package-update]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.LERNA_SANDBOX_OWNER }}
+          repository: onursumer/lerna-sandbox
+      - run: git fetch origin +refs/tags/*:refs/tags/*
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '10.20.0'
+      - run: yarn updateVersion
+        env:
+          GITHUB_TOKEN: ${{ secrets.LERNA_SANDBOX_OWNER }}
