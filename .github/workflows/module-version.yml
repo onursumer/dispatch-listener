@@ -2,9 +2,9 @@
 name: Update Package Version
 
 on:
-  workflow_dispatch:
   repository_dispatch:
     types: [lerna-sandbox-package-update]
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
