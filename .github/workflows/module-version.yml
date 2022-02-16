@@ -2,6 +2,7 @@
 name: Update Package Version
 
 on:
+  workflow_dispatch:
   repository_dispatch:
     types: [lerna-sandbox-package-update]
 jobs:
